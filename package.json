@@ -1,0 +1,15 @@
+{
+  "name": "zapp_web",
+  "version": "1.0.0",
+  "description": "zapp web infra",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dor",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.0.1",
+    "cypress-xpath": "^1.4.0"
+  }
+}
