@@ -49,3 +49,11 @@ Cypress.Commands.add("login", (email, password) => {
     // Press ok
     cy.get("input[name='commit']").click()
 })
+Cypress.Server.defaults({
+    delay: 500,
+    force404: false,
+    whitelist: (xhr) => {
+      // handle custom logic for whitelisting
+      return true;
+    }
+  })

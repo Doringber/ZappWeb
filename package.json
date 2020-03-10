@@ -9,7 +9,7 @@
   "author": "Dor",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^4.0.1",
+    "cypress": "^4.0.2",
     "cypress-xpath": "^1.4.0"
   }
 }
