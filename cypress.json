@@ -1,5 +1,11 @@
 {
-    "pageLoadTimeout": 100000,
-    "defaultCommandTimeout": 6000,
-    "chromeWebSecurity": true
+  "pageLoadTimeout": 100000,
+  "defaultCommandTimeout": 6000,
+  "chromeWebSecurity": true,
+  "env": {
+    "url": "https://zapp.applicaster.com/"
+  },
+  "projectId": "wk2qyd",
+  "reporter": "mochawesome"
+
 }

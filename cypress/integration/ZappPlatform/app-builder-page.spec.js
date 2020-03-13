@@ -8,13 +8,15 @@ context('App families open with login', () => {
 
     it('Verify app family page', () => {
         //Search for app
-
-        cy.get("li[class='active']").contains('Amit Test')
-        cy.location('pathname').should('eq', '/app_families/699');
+        cy.visit('https://zapp.applicaster.com/app_families/1116')
+        cy.get("li[class='active']").contains('Eden Test')
+        cy.location('pathname').should('eq', '/app_families/1116');
 
     })
         
-    it('Navigate to app builder', () =>{
+    it.only('Navigate to app builder', () =>{
+        cy.visit('https://zapp.applicaster.com/accounts/5c4034256a6c1b000e6d9aa8/app_families/1116/rivers_configurations/c58092e4-b68b-4008-83b3-febb26bc3917/rivers')
+
         //Press on App builder button 
         cy.get(".btn-toolbar").find('.btn btn-default').should('have.text',"Wildness")
 

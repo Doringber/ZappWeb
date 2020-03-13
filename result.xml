@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="13.785" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2020-03-13T21:58:18" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Zapp Login" timestamp="2020-03-13T21:58:18" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Zapp Page" timestamp="2020-03-13T21:58:18" tests="1" failures="0" time="13.785">
+    <testcase name="Zapp Login Zapp Page Verify the header buttons" time="13.785" classname="Verify the header buttons">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -23,8 +23,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
-Cypress.Commands.add("login", (email, password) => {
+
+Cypress.Commands.add("login", (email,password) => {
     cy.visit('https://zapp.applicaster.com/app_families/699')
+    cy.fixture('example').then(function(data)
+    {
+        this.data=data
+    })
 
     cy.location('protocol').should('eq', 'https:')
 
@@ -48,6 +53,8 @@ Cypress.Commands.add("login", (email, password) => {
 
     // Press ok
     cy.get("input[name='commit']").click()
+
+
 })
 Cypress.Server.defaults({
     delay: 500,
@@ -57,3 +64,4 @@ Cypress.Server.defaults({
       return true;
     }
   })
+

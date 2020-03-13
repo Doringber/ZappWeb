@@ -1,4 +1,3 @@
-import 'cypress-shadow-dom';
 
 context('Home page open', () => {
     beforeEach(() => {
@@ -38,12 +37,12 @@ context('Home page open', () => {
       })
 
 
-    it('Search app family', () => {
-        //Search for app
-        cy.get('#name').type('analytics')
-        cy.get("input[type='submit']").click({ multiple: true })
-        cy.wait(8000)
-        cy.get('.btn btn-default').click({force:true})
+    // it('Search app family', () => {
+    //     //Search for app
+    //     cy.get('#name').type('analytics')
+    //     cy.get("input[type='submit']").click({ multiple: true })
+    //     cy.wait(8000)
+    //     cy.get('.btn btn-default').click({force:true})
         // cy.shadowGet('.btn btn-default')
         //     .invoke('attr', 'href')
         //     .then(href => {
