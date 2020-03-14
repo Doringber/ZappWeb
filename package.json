@@ -4,7 +4,7 @@
   "description": "zapp web infra",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run --headless --reporter mochawesome  -s cypress/integration/ZappPlatform/zapp-platform.spec.js"
   },
   "author": "Dor",
   "license": "ISC",

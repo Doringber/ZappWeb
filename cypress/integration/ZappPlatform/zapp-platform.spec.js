@@ -114,7 +114,7 @@ context('Zapp Login', () => {
   })
 
   describe('Zapp features', () => {
-    it('Verify the QR and Download version', () => {
+    it.only('Verify the QR and Download version', () => {
       const homePage=new HomePage()
 
       cy.visit(Cypress.env('url') + 'app_families/1116')
@@ -129,7 +129,7 @@ context('Zapp Login', () => {
       //Verify the download button
       cy.get('a').contains('Download Build')
       .should('have.attr','href')
-      cy.get('a').contains('Download Build').should('be.enabled')
+      cy.get('a').contains('Download Build').should('not.be.disabled')
 
     })
   })
