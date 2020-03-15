@@ -10,13 +10,6 @@ https://nodejs.org/en/download/
 * Plase install NPM `npm install -g cypress@3.4.2`
 
 
-#### Generate config.cfg settings file: ####
-https://github.com/applicaster/ZappAutomationInfrastructure/wiki/Generating-config.cfg<br>
-
-__Example config.cfg files:__
-https://github.com/applicaster/ZappAutomationInfrastructure/blob/master/config_files/feature_app.cfg<br>
-(choose your correct configuration according to the platform and comment out the rest)
-
 #### Example Test: ####
 1. run on the cypress ci<br>
 `cypress run --record --key dadd0520-0bc0-401f-9dfa-c2e94c982240 -s cypress/integration/ZappPlatform/zapp-platform.spec.js`
