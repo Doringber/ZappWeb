@@ -6,7 +6,7 @@
 First you will need to install Node.js by download from here:
 https://nodejs.org/en/download/
 
-`git clone https://github.com/applicaster/`<br>
+`git clone https://github.com/Doringber/ZappWeb.git`<br>
 * Plase install NPM `npm install -g cypress@3.4.2`
 
 
