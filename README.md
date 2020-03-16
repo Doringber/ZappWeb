@@ -13,13 +13,13 @@ https://nodejs.org/en/download/
 
 #### Example Test: ####
 1. run on the cypress ci<br>
-`cypress run --record --key dadd0520-0bc0-401f-9dfa-c2e94c982240 -s cypress/integration/ZappPlatform/zapp-platform.spec.js`
+`npm test ci`
 
 2. run with report<br>
-`cypress run --reporter mochawesome  -s cypress/integration/ZappPlatform/zapp-platform.spec.js`    
+`npm test`    
 
 3. run with xml report<br>
-`cypress run --spec cypress/integration/ZappPlatform/zapp-platform.spec.js --reporter junit --reporter-options mochaFile=result.xml,toConsole=true`
+`npm test xml`
 
 
 
