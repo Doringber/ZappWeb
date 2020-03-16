@@ -114,7 +114,7 @@ context('Zapp Login', () => {
   })
 
   describe('Zapp features', () => {
-    it.only('Verify the QR and Download version', () => {
+    it('Verify the QR and Download version', () => {
       const homePage=new HomePage()
 
       cy.visit(Cypress.env('url') + 'app_families/1116')
