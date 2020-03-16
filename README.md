@@ -8,7 +8,6 @@ https://nodejs.org/en/download/
 
 `git clone https://github.com/Doringber/ZappWeb.git`<br>
 * Please install Cypress `npm install cypress --save-dev`
-* Please install this version 3.4.2  `npm install -g cypress@3.4.2`
 
 
 #### Example Test: ####
