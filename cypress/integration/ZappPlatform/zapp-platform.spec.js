@@ -134,5 +134,3 @@ context('Zapp Login', () => {
     })
   })
 })
-
-

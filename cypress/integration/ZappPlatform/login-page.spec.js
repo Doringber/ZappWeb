@@ -5,7 +5,7 @@ context('Home page open', () => {
             cy.location('protocol').should('eq', 'https:')
     
             // Take a snapshot
-            cy.screenshot('actions/login/Login_page');
+            // cy.screenshot('actions/login/Login_page');
     
             // Fill the username
             cy.get('#user_email')
@@ -21,7 +21,7 @@ context('Home page open', () => {
             cy.get("label[for='user_remember_me']").click({ multiple: true },{multiple:true})
     
             // Take a snapshot
-            cy.screenshot('actions/login/Login_page_with_credentials');
+            // cy.screenshot('actions/login/Login_page_with_credentials');
     
             // Press ok
             cy.get("input[name='commit']").click()

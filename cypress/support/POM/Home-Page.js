@@ -2,7 +2,6 @@ class HomePage
 {
 
 
-
 getAppBuilderButtons()
 {
     return cy.get('.btn-toolbar')

@@ -4,15 +4,30 @@
   "description": "zapp web infra",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run --headless --reporter mochawesome  -s cypress/integration/ZappPlatform/zapp-platform.spec.js"
+    "test": "cypress run --reporter mochawesome  -s cypress/integration/ZappPlatform/zapp-platform.spec.js",
+    "test chrome": "cypress run --browser chrome --reporter mochawesome  -s cypress/integration/ZappPlatform/zapp-platform.spec.js",
+    "test ci":"cypress run --record --key dadd0520-0bc0-401f-9dfa-c2e94c982240 -s cypress/integration/ZappPlatform/zapp-platform.spec.js",
+    "test xml": "cypress run --spec cypress/integration/ZappPlatform/zapp-platform.spec.js --reporter junit --reporter-options mochaFile=result.xml,toConsole=true",
+    "test cypress": "cypress run --headed"
   },
   "author": "Dor",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^4.0.2",
+    "cypress": "^3.4.1",
     "cypress-xpath": "^1.4.0",
     "mocha": "^7.1.0",
     "mochawesome": "^5.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "time-stamp": "^2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Doringber/ZappWeb.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Doringber/ZappWeb/issues"
+  },
+  "homepage": "https://github.com/Doringber/ZappWeb#readme"
 }
