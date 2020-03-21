@@ -24,7 +24,7 @@ getVersionID()
 
 getBuildFail()
 {
-    return cy.get('a[data-title="Build failed"]')
+    return cy.get('#test-versions > table > tbody > tr:nth-child(4) > td:nth-child(7) > a')
 
 
 }

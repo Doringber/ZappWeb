@@ -66,7 +66,7 @@ context('Zapp Login', () => {
   })
 
   describe('Zapp versions', () => {
-    it('Verify the app versions', () => {
+    it.only('Verify the app versions', () => {
       const homePage=new HomePage()
       const versionPage=new VersionPage()
 
