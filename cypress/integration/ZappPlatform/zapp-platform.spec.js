@@ -66,7 +66,7 @@ context('Zapp Login', () => {
   })
 
   describe('Zapp versions', () => {
-    it.only('Verify the app versions', () => {
+    it('Verify the app versions', () => {
       const homePage=new HomePage()
       const versionPage=new VersionPage()
 
@@ -87,7 +87,7 @@ context('Zapp Login', () => {
 
       versionPage.getPlatfromIcon().first().should('have.attr', 'src', '/assets/platform_icons/android-fea1877955a479d77dca364b220abf1d4ec050845af393dc935102f04e8a33cd.svg')
       versionPage.getVersionID().first().should('have.text','1.5')
-      versionPage.getBuildFail().should("be.visible")
+      versionPage.getBuildFail().should("be.enabled")
       versionPage.getBuildSucssed().first().should("be.visible")
     })
   })
@@ -119,14 +119,18 @@ context('Zapp Login', () => {
 
       cy.visit(Cypress.env('url') + 'app_families/1116')
 
+      //cy.server()
+     
+
       // Click downoload button
       homePage.getDownloadVersion().first().click()
       //Dropdown visable of download button  
       homePage.getDownloadDropDown().should('be.visible')
       homePage.getDownloadDropDown().contains('Debug Version').click()
       homePage.getDownloadQR().should('be.visible')
-      cy.wait(2000)
       //Verify the download button
+      //cy.route('GET', '**/5c4034256a6c1b000e6d9aa8/app_center_releases?build_type=debug').its('status').should('eq',200)
+      // cy.wait('@appcenter').its('status').should('eq',200)
       cy.get('a').contains('Download Build')
       .should('have.attr','href')
       cy.get('a').contains('Download Build').should('not.be.disabled')

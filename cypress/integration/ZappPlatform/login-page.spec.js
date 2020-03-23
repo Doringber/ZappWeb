@@ -1,3 +1,4 @@
+import 'cypress-shadow-dom';
 
 context('Home page open', () => {
     beforeEach(() => {
@@ -5,7 +6,7 @@ context('Home page open', () => {
             cy.location('protocol').should('eq', 'https:')
     
             // Take a snapshot
-            // cy.screenshot('actions/login/Login_page');
+            cy.screenshot('actions/login/Login_page');
     
             // Fill the username
             cy.get('#user_email')
@@ -21,7 +22,7 @@ context('Home page open', () => {
             cy.get("label[for='user_remember_me']").click({ multiple: true },{multiple:true})
     
             // Take a snapshot
-            // cy.screenshot('actions/login/Login_page_with_credentials');
+            cy.screenshot('actions/login/Login_page_with_credentials');
     
             // Press ok
             cy.get("input[name='commit']").click()
@@ -37,25 +38,25 @@ context('Home page open', () => {
       })
 
 
-    // it('Search app family', () => {
-    //     //Search for app
-    //     cy.get('#name').type('analytics')
-    //     cy.get("input[type='submit']").click({ multiple: true })
-    //     cy.wait(8000)
-    //     cy.get('.btn btn-default').click({force:true})
-        // cy.shadowGet('.btn btn-default')
-        //     .invoke('attr', 'href')
-        //     .then(href => {
-        //     cy.visit(href);
-        //     });
-        // cy.get("span[class='glyphicon glyphicon-info-sign']").click().parent()
+    it('Search app family', () => {
+        //Search for app
+        cy.get('#name').type('analytics')
+        cy.get("input[type='submit']").click({ multiple: true })
+        cy.wait(8000)
+        cy.get('.btn btn-default').click({force:true})
+        cy.shadowGet('.btn btn-default')
+            .invoke('attr', 'href')
+            .then(href => {
+            cy.visit(href);
+            });
+        cy.get("span[class='glyphicon glyphicon-info-sign']").click().parent()
 
     })
 
-    // it('Press on the first app', () => {
-    //     cy.get("a[class='btn btn-default']").click()
-    //     // cy.contains('Filter').click()
-    //     cy.get("li[class='active']").should('Berliner Morgenpost')
+    it('Press on the first app', () => {
+        cy.get("a[class='btn btn-default']").click()
+        // cy.contains('Filter').click()
+        cy.get("li[class='active']").should('Berliner Morgenpost')
     
-    // })
+    })
 })
