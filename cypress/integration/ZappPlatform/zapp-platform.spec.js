@@ -87,7 +87,7 @@ context('Zapp Login', () => {
 
       versionPage.getPlatfromIcon().first().should('have.attr', 'src', '/assets/platform_icons/android-fea1877955a479d77dca364b220abf1d4ec050845af393dc935102f04e8a33cd.svg')
       versionPage.getVersionID().first().should('have.text','1.5')
-      versionPage.getBuildFail().should("be.enabled")
+      versionPage.getBuildFail().should("be.visible")
       versionPage.getBuildSucssed().first().should("be.visible")
     })
   })
