@@ -22,7 +22,7 @@ context('Zapp Login', () => {
       homePage.getNameAccount().should('be.visible')
       homePage.getDropDownApp().should('be.visible')
       homePage.getFilterAccountButton().should('be.visible')
-      homePage.getAllAppsOnScreen().should('have.length',30)
+      homePage.getAllAppsOnScreen().should('have.length',15)
 
       //verify search for account
       homePage.getNameAccount().type("analytics")
